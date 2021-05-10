@@ -46,7 +46,7 @@
   // List View
   function listView() {
     for (i = 0; i < elements.length; i++) {
-      elements[i].style.width = "77%";
+      elements[i].style.width = "50%";
     }
   }
 // list -m

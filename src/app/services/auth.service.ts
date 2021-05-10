@@ -95,7 +95,7 @@ return this.http.put(`${environment.rooturl}${environment.apiauth}`,data);
           localStorage.setItem("userName", tokenObject.name.toString());
           this.isUserLoggedIn$.next(true);
 
-          this.router.navigate(["/products/digital/digital-category"]);
+          this.router.navigate(["/products/digital/digital-add-product"]);
 
         }),
         catchError(

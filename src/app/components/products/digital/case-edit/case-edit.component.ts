@@ -742,7 +742,7 @@ export class CaseEditComponent implements OnInit, OnDestroy {
 
 
           // debugger;
-          this.router.navigate(['/products/digital/digital-product-list']);
+          this.router.navigate(['/products/digital/digital-add-product']);
         });
     }
   }

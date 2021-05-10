@@ -96,6 +96,8 @@ export class DigitalAddComponent implements OnInit {
     }
 
   ngOnInit() {
+
+
     this.route.queryParams.subscribe((result) =>
       this.loadPage(result.page || 1)
     );
@@ -118,6 +120,8 @@ export class DigitalAddComponent implements OnInit {
   selectID(e: any) {
     console.log(e[e.selectedIndex].id);
   }
+
+
 
   CheckID(e: any, id: string) {
     debugger
