@@ -211,7 +211,7 @@ export class CasedetailsService {
   }
   // delete
 
-  deletecasedetails(id: number): Observable<DigitalListComponent> {
+  deletecasedetails(id: number): Observable <DigitalListComponent> {
     const url = `${environment.rooturl}${environment.apiUrlpostcase}/${id}`;
     return this.http.delete<DigitalListComponent>(url, this.httpOptions);
   }

@@ -51,6 +51,7 @@ export class HeaderComponent implements OnInit {
       debugger
      this.caseservice.subsVar = this.caseservice.
      invokeFirstComponentFunction.subscribe((name:string) => {
+       debugger
        this.collapseSidebar();
      });
    }

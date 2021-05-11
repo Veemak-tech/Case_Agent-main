@@ -62,10 +62,13 @@ export class DigitalAddComponent implements OnInit {
   closeResult = '';
   editForm: FormGroup;
 
+  loggedUserName : string = ''
+  isAuthenticated = false
+
   constructor(
     private user: CasedetailsService,
     private httpClient: HttpClient,
-    private userName: AuthService,
+    private authservice: AuthService,
     private route: ActivatedRoute,
     private modalService: NgbModal,
     public activeModal: NgbActiveModal,
@@ -74,7 +77,7 @@ export class DigitalAddComponent implements OnInit {
   ) {
     // debugger
     // for get agent name
-    this.userName.getName().subscribe((data) => {
+    this.authservice.getName().subscribe((data) => {
       console.log(data);
       console.log('user is working');
       this.name = data;
@@ -96,6 +99,11 @@ export class DigitalAddComponent implements OnInit {
     }
 
   ngOnInit() {
+
+    this.authservice.isUserLoggedIn$.subscribe((isLoggedIn)=>{
+      this.isAuthenticated = isLoggedIn
+      this.loggedUserName= localStorage.getItem("userName").toString()
+    })
 
 
     this.route.queryParams.subscribe((result) =>
@@ -192,7 +200,8 @@ export class DigitalAddComponent implements OnInit {
     debugger;
    // get page of items from api
    this.httpClient
-     .get<any>(`${environment.rooturl}${environment.apiUrlpostcase}/${page}/${10}`)
+    //  .get<any>(`${environment.rooturl}${environment.apiUrlpostcase}/${page}/${10}`)
+    .get<any>(`${environment.rooturl}${environment.apigetcasebylogged}/${page}/${10}/${this.loggedUserName}`)
      .subscribe((result) => {
        this.pageno = result.pager;
        this.pagesize = result.pageOfItems;

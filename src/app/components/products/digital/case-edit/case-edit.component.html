@@ -23,11 +23,11 @@
 
           <div class="col-md-12 row">
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-2"></div>
               <label for="CaseID" class="col-form-label col-sm-3 text-align">Case ID:</label>
               <div class="col-sm-6 p-adjust-mob">
-                <input type="text" class="form-control inputborder" minlength="2" formControlName="CaseID" required=""
+                <input type="text" class="form-control  inputborder" minlength="2" formControlName="CaseID" required=""
                   [ngClass]="{ 'is-invalid': submitted && f.CaseID.errors }">
                 <div *ngIf="submitted && f.CaseID.errors" class="invalid-feedback">
                   <div *ngIf="f.CaseID.errors.required">Case ID is required</div>
@@ -46,10 +46,10 @@
           </div> -->
 
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-2"></div>
               <label for="name" class="col-form-label col-sm-4 text-align">Ref Number:</label>
-              <div class="col-sm-6 p-adjust-mob">
+              <div class="col-sm-6 p-adjust-mob ">
                 <input type="text" class="form-control inputborder" formControlName="ReferenceNumber"
                   id="ReferenceNumber" name="ReferenceNumber" required=""
                   [ngClass]="{ 'is-invalid': submitted && f.ReferenceNumber.errors }">
@@ -65,7 +65,7 @@
 
           <div class="col-md-12 row">
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-1"></div>
               <label for="name" class="col-form-label col-sm-4 text-align">Due date:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -79,7 +79,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-2"></div>
               <label for="Name" class="col-form-label col-sm-4 text-align">Agent Name:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -107,8 +107,8 @@
           <div class=" row">
             <div class="col-sm-1 ml-4"></div>
             <div class="col-sm-1 ml-3"></div>
-            <div class="col-sm-8 ml-2 case-textarea inputborder">
-              <textarea class="form-control " formControlName="Description" name="Description" rows="3"
+            <div class="col-sm-8 ml-2 pl-0 pr-0 case-textarea mb-0 inputborder">
+              <textarea class="form-control" formControlName="Description" name="Description" rows="3"
                 [ngClass]="{ 'is-invalid': submitted && f.Description.errors }"></textarea>
               <div *ngIf="submitted && f.Description.errors" class="invalid-feedback">
                 <div *ngIf="f.Description.errors.required">Description is required</div>
@@ -149,7 +149,7 @@
 
 
           <div class="col-md-12 row">
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div></div>
               <label for="InsurerName" class="col-form-label col-sm-5 text-align">Insurer Name:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -163,7 +163,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-1"></div>
               <label for="PhoneNumber" class="col-form-label col-sm-5 text-align">Phone Number:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -184,7 +184,7 @@
             <div class="col-md-6 form-group row p-adjust-mob">
               <div class="col-sm-1"></div>
               <label for="EmailID" class="col-form-label col-sm-4 text-align">Email:</label>
-              <div class="col-sm-6 p-adjust-mob">
+              <div class="col-sm-6 p-adjust-mob ">
                 <input type="email" class="form-control inputborder" formControlName="EmailID" name="EmailID"
                   id="EmailID" [ngClass]="{'is-invalid' : submitted && f.EmailID.errors }">
                 <div *ngIf="submitted && f.EmailID.errors" class="invalid-feedback">
@@ -201,7 +201,7 @@
             <!-- <div style="width: 110px;"> -->
             <div class="col-sm-1 ml-4"></div>
             <!-- </div> -->
-            <div class="col-sm-4 form-group">
+            <div class="col-sm-4 form-group mb-2">
               <input type="text" class="form-control inputborder" formControlName="I_AddressLine1" name="I_AddressLine1"
                 id="I_AddressLine1" [ngClass]="{'is-invalid': submitted && f.I_AddressLine1.errors}">
               <div *ngIf="submitted && f.I_AddressLine1.errors" class="invalid-feedback">
@@ -211,7 +211,7 @@
               </div>
 
             </div>
-            <div class="col-sm-5 form-group">
+            <div class="col-sm-5 form-group mb-2">
               <input type="text" class="form-control inputborder" formControlName="I_AddressLine2" name="I_AddressLine2"
                 id="I_AddressLine2" [ngClass]="{ 'is-invalid': submitted && f.I_AddressLine2.errors }">
               <div *ngIf="submitted && f.I_AddressLine2.errors" class="invalid-feedback">
@@ -228,8 +228,8 @@
             <div class="col-sm-2 ml-4"></div>
             <!-- <div style="width: 110px;"></div> -->
 
-            <div class="col-sm-2 ml-1 form-group">
-              <input type="text" class="form-control inputborder" formControlName="I_City" name="I_City" id="I_City"
+            <div class="col-sm-2 ml-0 mb-2 form-group">
+              <input type="text" class="form-control  inputborder" placeholder="City" formControlName="I_City" name="I_City" id="I_City"
                 [ngClass]="{ 'is-invalid': submitted && f.I_City.errors }">
               <div *ngIf="submitted && f.I_City.errors" class="invalid-feedback">
                 <div *ngIf="f.I_City.errors.required">City is required</div>
@@ -238,8 +238,8 @@
               </div>
 
             </div>
-            <div class="col-sm-2 form-group">
-              <input type="text" class="form-control inputborder" formControlName="I_State" name="I_State" id="I_State"
+            <div class="col-sm-2 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="State" formControlName="I_State" name="I_State" id="I_State"
                 [ngClass]="{'is-invalid':submitted && f.I_State.errors }">
               <!-- <div class="invalid-feedback">
                 Enter a I_State
@@ -253,8 +253,8 @@
               </div>
 
             </div>
-            <div class="col-sm-2 form-group">
-              <input type="text" class="form-control inputborder" formControlName="I_Pincode" name="I_Pincode"
+            <div class="col-sm-2 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="Pincode" formControlName="I_Pincode" name="I_Pincode"
                 id="I_Pincode"
                 [ngClass]="{'is-invalid':submitted && f.I_Pincode.errors}">
               <!-- <div class="invalid-feedback">
@@ -268,8 +268,8 @@
               </div>
 
             </div>
-            <div class="col-sm-3 form-group">
-              <input type="text" class="form-control inputborder" formControlName="I_Landmark" name="I_Landmark"
+            <div class="col-sm-3 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="Landmark" formControlName="I_Landmark" name="I_Landmark"
                 id="I_Landmark"
                 [ngClass]="{'is-invalid':submitted && f.I_Landmark.errors}">
               <!-- <div class="invalid-feedback">
@@ -291,14 +291,14 @@
 
           <div class="row mt-0">
             <div class="col-sm-2" style="margin-left: 31px;"></div>
-            <label for="notes" class="col-form-label col-sm-9">Notes:</label>
+            <label for="notes" class="col-form-label col-sm-9 ml-3">Insurance Verification Notes:</label>
           </div>
 
           <div class=" row">
             <div class="col-sm-1"></div>
-            <div class="col-sm-1"></div>
-            <div class=" col-sm-8 ml-5 ">
-              <textarea class="form-control" formControlName="InsurerVerificationNotes" name="InsurerVerificationNotes"
+            <div style="width: 135px;"></div>
+
+              <textarea class="form-control col-sm-7 case-textarea" formControlName="InsurerVerificationNotes" name="InsurerVerificationNotes"
                 rows="6" placeholder="Insurer Questions"
                 [ngClass]="{'is-invalid': submitted && f.InsurerVerificationNotes.errors}">
              </textarea>
@@ -315,18 +315,14 @@
                 <div *ngIf="f.InsurerVerificationNotes.errors.maxlength">Max 250 Characters</div>
 
               </div>
-              <div class="remove-vol-control">
-                <audio *ngIf="!IisRecording && IblobUrl" controls >
-                  <source [src]="IblobUrl" type="audio/webm">
-                </audio>
-              </div>
 
-            </div>
-            <div class="col-sm-1 btn-group-vertical">
+
+
+            <div class="col-sm-1 btn-group-vertical single-line-button">
               <!-- audio -->
-              <div id="InsurerAudio">
-              <button id="InsAudio" *ngIf="!IisRecording && !IblobUrl" (click)="IstartRecording()" type="button"
-              class="btn btn-sm btn-outline-primary buttonfont"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+
+              <button *ngIf="!IisRecording && !IblobUrl" (click)="IstartRecording()" type="button"
+              class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
@@ -334,26 +330,32 @@
                   d="M10 8V3a2 2 0 1 0-4 0v5a2 2 0 1 0 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
               </svg></button>
             <button type="button" *ngIf="IisRecording && !IblobUrl" (click)="IstopRecording()"
-              class="btn btn-sm btn-outline-primary buttonfont"><i class="fa fa-stop-circle-o" aria-hidden="true">
+              class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud"><i class="fa fa-stop-circle-o" aria-hidden="true">
               </i></button>
-            <button class="btn btn-sm btn-outline-primary buttonfont" *ngIf="!IisRecording && IblobUrl"
+            <button class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud" *ngIf="!IisRecording && IblobUrl"
               (click)="IclearRecordedData()"> <i class="fa fa-reply" aria-hidden="true"></i></button>
               <div *ngIf="IisRecording && !IblobUrl"> {{IrecordedTime}} </div>
-            </div>
+
+
+
 
 
               <div class="mt-5"></div>
               <!-- video -->
-              <button type="button" class="btn btn-sm btn-outline-info buttonfont" data-toggle="modal"
+              <button type="button" class="btn btn-sm mr-4 btn-outline-info buttonfont mob-button button-vid" data-toggle="modal"
               data-target=".bd-example-modal-lg-1"><svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-camera-video" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175l3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
                 </svg></button>
+                <div class="remove-vol-control" style="margin-left: 1.5rem;">
+                  <audio *ngIf="!IisRecording && IblobUrl" controls >
+                    <source [src]="IblobUrl" type="audio/webm">
+                  </audio>
+                </div>
               <div class="mt-5"></div>
             </div>
-            <div></div>
             <div class="modal fade bd-example-modal-lg-1" tabindex="-1" role="dialog"
             aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -398,7 +400,7 @@
 
 
           <div class="col-md-12 row">
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <!-- <div class="col-sm-1"></div> -->
               <label for="InsurerName" class="col-form-label col-sm-5 text-align">Thirdparty Name:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -419,7 +421,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 form-group row p-adjust-mob">
+            <div class="col-md-6 form-group row p-adjust-mob mb-0">
               <div class="col-sm-1"></div>
               <label for="T_PhoneNumber" class="col-form-label col-sm-5 text-align">Phone Number:</label>
               <div class="col-sm-6 p-adjust-mob">
@@ -467,7 +469,7 @@
             <div class="col-sm-1 ml-4"></div>
             <!-- <div style="width: 110px;">
                           </div> -->
-            <div class="col-sm-4 form-group">
+            <div class="col-sm-4 form-group mb-2">
               <input type="text" class="form-control inputborder" formControlName="T_AddressLine1" name="T_AddressLine1"
                 id="T_AddressLine1"
                 [ngClass]="{'is-invalid':submitted && f.T_AddressLine1.errors}">
@@ -483,7 +485,7 @@
               </div>
 
             </div>
-            <div class="col-sm-5 form-group">
+            <div class="col-sm-5 form-group mb-2">
               <input type="text" class="form-control inputborder" formControlName="T_AddressLine2" name="T_AddressLine2"
                 id="T_AddressLine2"
                 [ngClass]="{'is-invalid':submitted && f.T_AddressLine2.errors}">
@@ -505,8 +507,8 @@
             <div class="col-sm-2 ml-4"></div>
             <!-- <div style="width: 110px;"></div> -->
 
-            <div class="col-sm-2 ml-1 form-group">
-              <input type="text" class="form-control inputborder" formControlName="T_City" name="T_City" id="T_City"
+            <div class="col-sm-2 ml-0 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="City" formControlName="T_City" name="T_City" id="T_City"
                 [ngClass]="{'is-invalid':submitted && f.T_City.errors}">
               <!-- <div class="invalid-feedback">
                 Enter a T_City
@@ -519,8 +521,8 @@
               </div>
 
             </div>
-            <div class="col-sm-2 form-group">
-              <input type="text" class="form-control inputborder" formControlName="T_State" name="T_State" id="T_State"
+            <div class="col-sm-2 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="State" formControlName="T_State" name="T_State" id="T_State"
                 [ngClass]="{'is-invalid':submitted && f.T_State.errors}">
               <!-- <div class="invalid-feedback">
                 Enter a T_State
@@ -532,8 +534,8 @@
               </div>
 
             </div>
-            <div class="col-sm-2 form-group">
-              <input type="text" class="form-control inputborder" formControlName="T_Pincode" name="T_Pincode"
+            <div class="col-sm-2 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="Pincode" formControlName="T_Pincode" name="T_Pincode"
                 id="T_Pincode"
                 [ngClass]="{'is-invalid':submitted && f.T_Pincode.errors}">
               <!-- <div class="invalid-feedback">
@@ -547,8 +549,8 @@
               </div>
 
             </div>
-            <div class="col-sm-3 form-group">
-              <input type="text" class="form-control inputborder" formControlName="T_Landmark" name="T_Landmark"
+            <div class="col-sm-3 form-group mb-2">
+              <input type="text" class="form-control inputborder" placeholder="Landmark" formControlName="T_Landmark" name="T_Landmark"
                 id="T_Landmark"
                 [ngClass]="{'is-invalid': submitted && f.T_Landmark.errors}">
               <!-- <div class="invalid-feedback">
@@ -569,16 +571,15 @@
 
           <div class="row mt-0">
             <div class="col-sm-2" style="margin-left: 31px;"></div>
-            <label for="notes" class="col-form-label col-sm-9">Notes:</label>
+            <label for="notes" class="col-form-label ml-3 col-sm-9 ml-3">Third party Notes:</label>
           </div>
 
           <div class=" row">
             <div class="col-sm-1"></div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-8 ml-5 ">
-              <textarea class="form-control " formControlName="T_VerificationNotes" name="T_VerificationNotes" rows="6"
+            <div style="width: 135px;"></div>
+              <textarea class="form-control col-sm-7  case-textarea" formControlName="T_VerificationNotes" name="T_VerificationNotes" rows="6"
                 placeholder="Thirdparty Questions"
-                [ngClass]="{'is-invalid':submitted && f.T_VerificationNotes.errors}">
+                [ngClass] = "{'is-invalid':submitted && f.T_VerificationNotes.errors}">
              </textarea>
               <!-- <div class="invalid-feedback">
                 Enter a T_VerificationNotes
@@ -591,21 +592,16 @@
                 <div *ngIf="f.T_VerificationNotes.errors.maxlength">Max 250 Characters</div>
 
               </div>
-              <div class="remove-vol-control">
-                <audio *ngIf="!isRecording && blobUrl" controls >
-                  <source [src]="blobUrl" type="audio/webm">
-                </audio>
-              </div>
+
               <!-- <button (click)="download()">Download</button> -->
 
 
-            </div>
 
-            <div class="col-sm-1 btn-group-vertical">
+            <div class="col-sm-1 btn-group-vertical single-line-button">
               <!-- ------------------------------audio --------------------->
-              <div id="tpartyAudio">
-              <button id="TpAudio" *ngIf="!isRecording && !blobUrl" (click)="startRecording()" type="button"
-                class="btn btn-sm btn-outline-primary buttonfont"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+
+              <button  *ngIf="!isRecording && !blobUrl" (click)="startRecording()" type="button"
+                class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                   height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
@@ -613,24 +609,29 @@
                     d="M10 8V3a2 2 0 1 0-4 0v5a2 2 0 1 0 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
                 </svg></button>
               <button type="button" *ngIf="isRecording && !blobUrl" (click)="stopRecording()"
-                class="btn btn-sm btn-outline-primary buttonfont"><i class="fa fa-stop-circle-o" aria-hidden="true">
+                class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud"><i class="fa fa-stop-circle-o" aria-hidden="true">
                 </i></button>
-              <button class="btn btn-sm btn-outline-primary buttonfont" *ngIf="!isRecording && blobUrl"
+              <button class="btn btn-sm btn-outline-primary buttonfont mob-button button-aud" *ngIf="!isRecording && blobUrl"
                 (click)="clearRecordedData()"> <i class="fa fa-reply" aria-hidden="true"></i></button>
               <div *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
-            </div>
+
               <div>
 
               </div>
 
               <div class="mt-5"></div>
               <!-- ---------------------------------------------video -------------------------------------->
-              <button type="button" class="btn btn-sm btn-outline-info buttonfont" data-toggle="modal"
+              <button type="button" class="btn btn-sm mr-4 btn-outline-info buttonfont mob-button button-vid" data-toggle="modal"
                 data-target=".bd-example-modal-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                   fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
                     d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175l3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
                 </svg></button>
+                <div class="remove-vol-control" style="margin-left: 1.5rem;">
+                  <audio *ngIf="!isRecording && blobUrl" controls >
+                    <source [src]="blobUrl" type="audio/webm">
+                  </audio>
+                </div>
               <!-- Modal -->
 
 

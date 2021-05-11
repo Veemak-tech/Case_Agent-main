@@ -3,6 +3,7 @@ export const environment = {
   rooturl: 'http://veemak.online/api',
   apiUrl: '/casedetails/getall',
   apiUrlpostcase: '/casedetails',
+  apigetcasebylogged:'/casedetails/usercase',
   apicasegetbyid: '/casedetails/case',
   // apigetid:'http://localhost:3000/auth/:id',
   apiauth: '/auth',

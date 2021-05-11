@@ -99,10 +99,6 @@
 .pop-l-r{
   text-align: right;
 }
-
-
-
-
   .select,
   #locale {
     width: 100%;
@@ -210,6 +206,17 @@
   -webkit-transition-duration: 0.5s;
      -moz-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+.fontstyle{
+  font-family: revert;
+  font-weight: 700;
+  font-stretch: ultra-expanded;
+  font-variant: proportional-nums;
+  //font-size: 72px;
+  background: -webkit-linear-gradient(#888888, #ccafaf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 // .select-max-height{
