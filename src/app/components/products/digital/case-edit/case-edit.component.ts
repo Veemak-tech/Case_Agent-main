@@ -51,6 +51,8 @@ import videojs from 'video.js';
 import * as adapter from 'webrtc-adapter/out/adapter_no_global.js';
 import * as Record from 'videojs-record/dist/videojs.record.js';
 import { Observable } from 'rxjs';
+import { questions } from 'src/app/models/questions';
+import { questionoptions } from 'src/app/models/questionoptions';
 let ReecordRTC = require('recordrtc/RecordRTC.min');
 declare var $ : any
 @Component({
@@ -95,6 +97,11 @@ export class CaseEditComponent implements OnInit, OnDestroy {
   IaudioBlob;
   adata: any;
   adataI:any;
+
+  ins_questionsarray: any;
+  t_questionsarray: any;
+  questionoptionsarray: questionoptions[];
+
   //video
   private stream!: MediaStream;
   private recordRTC: any;
@@ -613,6 +620,40 @@ export class CaseEditComponent implements OnInit, OnDestroy {
     //     'opacity': $(this).val()
     //   });
     // });
+
+    // to get Questions
+    // Ins question
+    var selectedid = 1;
+    this.caseservice.getquestions(selectedid).subscribe(
+      (questionsdata: questions) => {
+        this.ins_questionsarray = questionsdata;
+        //console.log(this.t_questionsarray);
+
+        // t party questions
+        var selectedid2 = 2;
+        this.caseservice.getquestions(selectedid2).subscribe(
+          (t_questionsdata: questions) => {
+            this.t_questionsarray = t_questionsdata;
+            // console.log(this.t_questionsarray);
+            var optionlist;
+            // question options
+            this.caseservice.getquestionoptions(selectedid).subscribe(
+              (questionoptionslist: questionoptions) => {
+                 optionlist = questionoptionslist;
+                console.log(questionoptionslist);
+              }
+            );
+            debugger
+             this.questionoptionsarray = optionlist;
+            this.t_questionsarray.forEach(element => {
+              debugger
+              element.questionoptions = this.questionoptionsarray.filter(p => p.questionid === element.questionid)
+
+            });
+          }
+        );
+      }
+    );
   }
 
   update() {

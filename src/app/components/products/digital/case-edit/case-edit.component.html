@@ -289,6 +289,97 @@
 
           </div>
 
+
+
+
+          <!-- ins question -->
+          <div class="col-sm-8 ml-0 pb-2 borderstyle border border-info">
+            <div class="col-md-12 pl-0" *ngFor="let control of ins_questionsarray">
+              <div [ngSwitch]="control.controltype">
+                <!-- text -->
+                <div class="mb-2" *ngSwitchCase="'text'">
+                  <div class="col-md-12">
+                    <label class="{{control.labelcss}}">{{control.questiondisplaytext}}</label>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="{{control.controltype}}" class="{{control.controlcss}}"
+                      aria-describedby="passwordHelpBlock" placeholder="{{control.questionname}}" value="">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      {{control.helptext}}
+                    </small>
+                  </div>
+                </div>
+                <!-- radio -->
+                <div *ngSwitchCase="'radio'">
+                  <div class="col-md-12 mb-3">
+
+                    <label for="gender">{{control.questionname}}</label>
+
+                    <div class="col-md-12 row">
+                      <div class="form-check mr-3" *ngFor="let val of control.questiondisplaytext.split(',')">
+                        <label class="form-check-label" for="{{val}}">
+                          <input type="radio" class="form-check-input" name="radio" id="{{val}}"
+                            value="{{val}}">{{val}}
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-md-12 row">
+                      <div class="form-check form-check-inline mr-3"
+                       *ngFor="let val of questionoptionsarray  ">
+                        <label class="form-check-label" for="{{val}}">
+                          <input class="form-check-input" type="radio" name="radio" id="{{val}}"
+                            value="{{val}}">{{val}}
+                        </label>
+                      </div>
+                    </div> -->
+
+
+
+                  </div>
+                </div>
+                <!-- select -->
+                <div *ngSwitchCase="'select'">
+                  <div class="col-md-12">
+
+                    <label for="city">{{control.questiondisplaytext}}</label>
+
+                    <div class="col-md-12 row pl-0">
+                      <div class="form-check mr-3">
+                        <select class="custom-select" name="city" id="city">
+                          <option *ngFor="let val of control.questionname.split(',')" value="{{val}}">{{val}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- checkbox -->
+                    <div *ngSwitchCase="'checkbox'">
+                      <div class="col-md-12 mb-3 mt-2">
+                        <!-- <label for="gender">{{control.questionname}}</label><br> -->
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label " for="{{control.questionname}}">
+                            <input class="form-check-input" type="checkbox" value="{{control.questiondisplaytext}}">
+                            {{control.questionname}}
+
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
           <div class="row mt-0">
             <div class="col-sm-2" style="margin-left: 31px;"></div>
             <label for="notes" class="col-form-label col-sm-9 ml-3">Insurance Verification Notes:</label>
@@ -567,6 +658,28 @@
             </div>
             <!-- <div class="col-sm-2"></div> -->
 
+          </div>
+
+           <!-- tpart question -->
+           <div class="col-sm-8  pb-2 borderstyle border border-info">
+            <div class="col-md-12 pl-0" *ngFor="let control of t_questionsarray">
+              <div [ngSwitch]="control.controltype">
+                <div *ngSwitchCase="'text'">
+                  <div class="col-md-12 pl-">
+                    <label class="{{control.labelcss}}">{{control.questionname}}</label>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="{{control.controltype}}" class="{{control.controlcss}}" class=""
+                      aria-describedby="passwordHelpBlock" placeholder="{{control.questiondisplaytext}}" value="">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      {{control.helptext}}
+                    </small>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
           </div>
 
           <div class="row mt-0">
