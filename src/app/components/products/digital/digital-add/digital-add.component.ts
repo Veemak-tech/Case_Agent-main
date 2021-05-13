@@ -62,7 +62,8 @@ export class DigitalAddComponent implements OnInit {
   closeResult = '';
   editForm: FormGroup;
 
-  loggedUserName : string = ''
+  loggedUserID : string = ''
+  loggedUserName : string =''
   isAuthenticated = false
 
   constructor(
@@ -102,7 +103,9 @@ export class DigitalAddComponent implements OnInit {
 
     this.authservice.isUserLoggedIn$.subscribe((isLoggedIn)=>{
       this.isAuthenticated = isLoggedIn
-      this.loggedUserName= localStorage.getItem("userName").toString()
+      this.loggedUserID= localStorage.getItem("id")
+      this.loggedUserName = localStorage.getItem('userName').toString()
+
     })
 
 
@@ -201,7 +204,7 @@ export class DigitalAddComponent implements OnInit {
    // get page of items from api
    this.httpClient
     //  .get<any>(`${environment.rooturl}${environment.apiUrlpostcase}/${page}/${10}`)
-    .get<any>(`${environment.rooturl}${environment.apigetcasebylogged}/${page}/${10}/${this.loggedUserName}`)
+    .get<any>(`${environment.rooturl}${environment.apigetcasebylogged}/${page}/${10}/${this.loggedUserID}`)
      .subscribe((result) => {
        this.pageno = result.pager;
        this.pagesize = result.pageOfItems;
